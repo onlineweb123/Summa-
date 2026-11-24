@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RO Water Purifiers List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 30px;
+        }
+        .machine-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .machine-card img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+            border: 1px solid #ddd;
+            cursor: pointer; /* கிளிக் செய்யலாம் என்பதைக் காட்ட */
+            transition: transform 0.2s;
+        }
+        .machine-card img:hover {
+            transform: scale(1.03); /* மவுஸ் வைக்கும்போது சிறிய அனிமேஷன் */
+        }
+        .machine-details {
+            flex: 1;
+        }
+        .machine-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            color: #222;
+        }
+        .machine-desc {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 12px 0;
+        }
+        .machine-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* Photo-வை பெரிதாகக் காட்டுவதற்கான (Lightbox/Modal) CSS */
+        .modal {
+            display: none; /* ஆரம்பத்தில் மறைந்திருக்கும் */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* கருப்பு பின்னணி */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            object-fit: contain;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: #ff4d4d;
+        }
+
+        /* Mobile view-kku yetha maathiri */
+        @media (max-width: 500px) {
+            .machine-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .machine-card img {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>RO Machines Price List</h1>
+
+    <!-- Machine 1 -->
+    <div class="machine-card">
+        <img src="a.jpg" alt="RO Machine 1" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 1</h2>
+            <p class="machine-desc">RO + UV + UF Water Purifier</p>
+            <div class="machine-price">Rs. 8,500</div>
+        </div>
+    </div>
+
+    <!-- Machine 2 -->
+    <div class="machine-card">
+        <img src="b.jpg" alt="RO Machine 2" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 2</h2>
+            <p class="machine-desc">RO + UV + Copper Purifier</p>
+            <div class="machine-price">Rs. 9,500</div>
+        </div>
+    </div>
+
+    <!-- Machine 3 -->
+    <div class="machine-card">
+        <img src="c.jpg" alt="RO Machine 3" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 3</h2>
+            <p class="machine-desc">RO + Alkaline Water Purifier</p>
+            <div class="machine-price">Rs. 10,500</div>
+        </div>
+    </div>
+
+    <!-- Machine 4 -->
+    <div class="machine-card">
+        <img src="d.jpg" alt="RO Machine 4" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 4</h2>
+            <p class="machine-desc">12 Litre Storage RO Purifier</p>
+            <div class="machine-price">Rs. 11,000</div>
+        </div>
+    </div>
+
+    <!-- Machine 5 -->
+    <div class="machine-card">
+        <img src="e.jpg" alt="RO Machine 5" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 5</h2>
+            <p class="machine-desc">RO + UV + TDS Controller</p>
+            <div class="machine-price">Rs. 11,800</div>
+        </div>
+    </div>
+
+    <!-- Machine 6 -->
+    <div class="machine-card">
+        <img src="f.jpg" alt="RO Machine 6" onclick="openPhoto(this.src)">
+        <div class="machine-details">
+            <h2 class="machine-title">RO Machine Model 6</h2>
+            <p class="machine-desc">Commercial 25 LPH RO Plant</p>
+            <div class="machine-price">Rs. 18,000</div>
+        </div>
+    </div>
+</div>
+
+<!-- Photo பெரிதாகத் திறப்பதற்கான Popup பகுதி -->
+<div id="photoModal" class="modal" onclick="closePhoto()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="fullImage" alt="Full View">
+</div>
+
+<script>
+    // Photo-வை கிளிக் செய்தால் திறக்கும் Function
+    function openPhoto(imageSrc) {
+        var modal = document.getElementById("photoModal");
+        var fullImg = document.getElementById("fullImage");
+        modal.style.display = "flex";
+        fullImg.src = imageSrc;
+    }
+
+    // மூடுவதற்கான (Close) Function
+    function closePhoto() {
+        document.getElementById("photoModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
